@@ -5,10 +5,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
-import { CounterComponent } from './counter/counter.component';
-import { ProductComponent } from './products/product/product.component';
-import { ProductCodePipe } from './products/product-code.pipe';
-import { ProductService } from './products/product.service';
+import { CoreModule } from './core.module';
+import { ProductModule } from './products/product.module';
 
 @NgModule({
   declarations: [
@@ -16,14 +14,11 @@ import { ProductService } from './products/product.service';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    CounterComponent,
-    ProductComponent,
-    ProductCodePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,CoreModule,ProductModule
   ],
-  providers: [ProductService],
+  providers: [], // remove ProductService to coreModule
   bootstrap: [HeaderComponent,ContentComponent,FooterComponent]
 })
 export class AppModule { }

@@ -1,0 +1,16 @@
+/* CSS */
+div span{
+    display: inline-block;
+    width: 100px;
+}
+.low-price{
+    color: red;
+}
+
+.lightblue{
+    background-color:lightblue
+}
+
+.palegoldenrod{
+    background-color:palegoldenrod
+}

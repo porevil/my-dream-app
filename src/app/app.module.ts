@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { CounterComponent } from './counter/counter.component';
+import { ProductComponent } from './products/product/product.component';
+import { ProductCodePipe } from './products/product-code.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { CounterComponent } from './counter/counter.component';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    CounterComponent 
+    CounterComponent,
+    ProductComponent,
+    ProductCodePipe
   ],
   imports: [
     BrowserModule

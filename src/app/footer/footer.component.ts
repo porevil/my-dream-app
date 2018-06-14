@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../products/product.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  menuSelectedItem:number;
+  constructor(private productService:ProductService) { }
 
   ngOnInit() {
+    this.productService.menuSelected.subscribe(
+      (menuItem)=>{
+        this.menuSelectedItem=menuItem;
+      }
+    );
   }
 
 }

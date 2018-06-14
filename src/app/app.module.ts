@@ -8,6 +8,7 @@ import { ContentComponent } from './content/content.component';
 import { CounterComponent } from './counter/counter.component';
 import { ProductComponent } from './products/product/product.component';
 import { ProductCodePipe } from './products/product-code.pipe';
+import { ProductService } from './products/product.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ProductCodePipe } from './products/product-code.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [ContentComponent]
+  providers: [ProductService],
+  bootstrap: [HeaderComponent,ContentComponent,FooterComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../products/product.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productService:ProductService) { }
 
   ngOnInit() {
+  }
+
+  selectMenu(menuItem:number){
+    this.productService.setSelectedMenu(menuItem);
+    console.log('set seletedMenu'+menuItem);
+    
   }
 
 }

@@ -1,0 +1,63 @@
+{"products_group1":[
+    {
+    "productCode": "Mouse",
+    "productName": "Fantastic Concrete Ball",
+    "price": "588.00",
+    "rating": 5
+    },
+    {
+    "productCode": "Bike",
+    "productName": "Ergonomic Rubber Table",
+    "price": "34.00",
+    "rating": 2
+    },
+    {
+    "productCode": "Fish",
+    "productName": "Sleek Rubber Car",
+    "price": "945.00",
+    "rating": 4
+    },
+    {
+    "productCode": "Keyboard",
+    "productName": "Fantastic Granite Chair",
+    "price": "187.00",
+    "rating": 5
+    },
+    {
+    "productCode": "Towels",
+    "productName": "Tasty Wooden Hat",
+    "price": "980.00",
+    "rating": 5
+    },
+    {
+    "productCode": "Shoes",
+    "productName": "Practical Cotton Table",
+    "price": "314.00",
+    "rating": 1
+    },
+    {
+    "productCode": "Chair",
+    "productName": "Awesome Fresh Soap",
+    "price": "392.00",
+    "rating": 1
+    },
+    {
+    "productCode": "Chicken",
+    "productName": "Small Soft Hat",
+    "price": "947.00",
+    "rating": 4
+    },
+    {
+    "productCode": "Bike",
+    "productName": "Unbranded Frozen Table",
+    "price": "75.00",
+    "rating": 1
+    },
+    {
+    "productCode": "Bike",
+    "productName": "Ergonomic Metal Sausages",
+    "price": "333.00",
+    "rating": 5
+    }
+    ]
+}

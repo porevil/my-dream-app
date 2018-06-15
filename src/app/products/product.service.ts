@@ -1,4 +1,7 @@
 import { Injectable,EventEmitter } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Product } from './product';
+import { BASE_URL } from '../setting';
 
 
 @Injectable({
@@ -6,9 +9,11 @@ import { Injectable,EventEmitter } from '@angular/core';
 })
 
 export class ProductService {
-  
+  products:Product[];
+
   private _selectedMenu: number;
   public menuSelected = new EventEmitter<number>();
+  private _serviceURL = BASE_URL+"products_group1";
 
   public getSelectedMenu(): number {
     return this._selectedMenu;
@@ -18,11 +23,17 @@ export class ProductService {
     this.menuSelected.emit(value);
   }
 
-  constructor() { }
+  constructor(private httpClient:HttpClient) { }
 
 
   getAll(){
-    return [{
+    console.log('*****************************************')
+    console.log(this.httpClient.get<Product[]>(this._serviceURL));
+    return this.httpClient.get<Product[]>(this._serviceURL);
+
+    
+    /*
+    [{
       "id": 1,
       "name": "PS5",
       "price": 85.50,
@@ -53,4 +64,7 @@ export class ProductService {
     "tags": ["home", "green"]
   }]
   }
+    */
+  }
+
 }

@@ -6,3 +6,6 @@
 >ng g m products/product --flat --routing --no-spec
 
 https://blog.cloudboost.io/angular-faster-performance-and-better-user-experience-with-lazy-loading-a4f323b2cf4a
+
+json-server
+npm i faker

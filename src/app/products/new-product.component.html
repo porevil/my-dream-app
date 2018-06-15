@@ -1,0 +1,24 @@
+<div class="container">
+  <h3>New Product</h3>
+  <form>
+     
+      <div class="form-group" >
+          <label class="control-label">Product Name</label>
+          <input type="text" class="form-control" name="txtName" #txtName="ngModel"
+          ngModel required pattern="[A-z]{3,}">
+          {{ txtName.valid }}
+          <div *ngIf="txtName.invalid && txtName.dirty" class="alert alert-danger">
+            Product is required, and must be at least 3 characters.
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label">Primary Language</label>
+          <select class="form-control" (click)="selectLang()" [(ngModel)]="selectedLang" #primaryLanguage name="primaryLanguage">
+
+              <option value="default">Select a Language...</option>
+              <option *ngFor="let lang of langs">{{lang}}</option>
+          </select>
+      </div>
+      <button class="btn btn-primary" type="submit">Ok</button>
+  </form>
+</div>

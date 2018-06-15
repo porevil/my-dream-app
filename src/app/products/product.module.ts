@@ -5,6 +5,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product/product.component';
 import { ProductCodePipe } from './product-code.pipe';
 import { SharedModule } from '../shared.module';
+import { NewProductComponent } from './new-product.component';
 
 @NgModule({
   imports: [
@@ -14,12 +15,15 @@ import { SharedModule } from '../shared.module';
   ],
   declarations: [ // Declaration for use in product module only
     ProductComponent,
-    ProductCodePipe
+    ProductCodePipe,
+    NewProductComponent,
+    
   ],
   exports:[
     ProductComponent,
     ProductCodePipe,
-    SharedModule
+    SharedModule,
+    NewProductComponent
   ]
 })
 export class ProductModule { }

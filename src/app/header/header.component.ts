@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { ProductService } from '../products/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,17 @@ import { ProductService } from '../products/product.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private productService:ProductService) { }
+  constructor(private productService:ProductService,
+  private router:Router) { }
 
   ngOnInit() {
+  }
+  ngOnChanges(change: SimpleChanges){
+
+  }
+  goToNewProductPage(e){
+    this.router.navigate(['/products']);
+    e.preventDefault();
   }
 
   selectMenu(menuItem:number){

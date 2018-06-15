@@ -9,10 +9,13 @@
             <a class="nav-link"  href="#" (click)="selectMenu(1)">Welcome</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#" (click)="selectMenu(2)">Products</a>
+            <a class="nav-link" href="#" (click)="goToNewProductPage()">All Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#" (click)="selectMenu(3)">Contact Us</a>
+            <a class="nav-link"  href="#" [routerLink]="['/products/new']">New Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="#" [routerLink]="['/products/detail']">Product Detail</a>
           </li>
         </ul>
   </div>

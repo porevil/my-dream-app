@@ -2,7 +2,7 @@ import { Injectable,EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from './product';
 import { BASE_URL } from '../setting';
-
+import { map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +29,12 @@ export class ProductService {
   getAll(){
     console.log('*****************************************')
     console.log(this.httpClient.get<Product[]>(this._serviceURL));
-    return this.httpClient.get<Product[]>(this._serviceURL);
+    
+    return this.httpClient.get<Product[]>(this._serviceURL)
+    .pipe(
+      tap((p)=>{console.log('SNAPSHOT >>>>>>>> '+p.forEach+'')}),
+      map((p)=> p)
+    );
 
     
     /*

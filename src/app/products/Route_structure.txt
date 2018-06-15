@@ -9,3 +9,5 @@ https://blog.cloudboost.io/angular-faster-performance-and-better-user-experience
 
 json-server
 npm i faker
+
+https://investmentnovel.com/angular-6-crud-example-tutorial-from-scratch/

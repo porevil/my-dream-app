@@ -1,4 +1,4 @@
-<div *ngFor="let product of products, let i=index" [ngClass]="{'lightblue':i%2==0,'palegoldenrod':i%2!=0}" >
+<!--div *ngFor="let product of products, let i=index" [ngClass]="{'lightblue':i%2==0,'palegoldenrod':i%2!=0}" >
   <span>{{i+1}} {{  product.productCode |code }}</span>
   <span>{{  product.productName  }}</span>
   <span [ngClass]="{'low-price':product.price<50}" >
@@ -10,4 +10,37 @@
   <ng-template #high> 
       <span>high</span>
   </ng-template>
-</div>
+</div-->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products, let i = index"  [ngClass]="{'lightblue':i%2==0,'palegoldenrod':i%2!=0}">
+      <td>{{ i+1 }}</td>
+      <td>{{ product.productId | code:'5' }}</td>
+      <td>{{ product.productName | lowercase | uppercase }}</td>
+      <td>
+          <span class="price"
+           [ngClass]="{'low-price': product.price<20}">
+            {{ product.price | number:'2.2-2' }}
+          </span>
+      </td>
+      <td>
+          <span *ngIf="product.price<20; else high">
+            LOW
+          </span>
+          <ng-template #high>
+          <span>HIGH</span>
+          </ng-template>
+      </td>
+    </tr>
+  </tbody>
+</table>
